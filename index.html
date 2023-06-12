@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <form method="POST" action="formulario.php">
+        <div class="formulario">
+        <h1>Formulario de registro</h1>
+        <p>Completa los siguientes campos para darte de alta en nuestra web.</p>
+
+<!-- Aunque no se requiera, metemos pattern en los campos de nombre y apellidos.
+Donde sí se pide es en el formato de email y en la contraseña. -->
+
+        <label for="nombre">Nombre *</label><br />
+        <input type="text" name="nombre" class="form-input" pattern="[a-zA-ZÀ-ÿ\s]{1,}$" required/><br />
+
+        <label for="apellido">Primer apellido *</label><br />
+        <input type="text" name="apellido1" class="form-input" pattern="[a-zA-ZÀ-ÿ\s]{1,}$" required/><br />
+
+        <label for="apellido">Segundo apellido *</label><br />
+        <input type="text" name="apellido2" class="form-input" pattern="[a-zA-ZÀ-ÿ\s]{1,}$" required/><br />
+
+        <label for="email">Correo electrónico *</label><br />
+        <input type="email" name="email" class="form-input"
+        pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"
+        required><br />
+
+        <label for="nombre">Usuario *</label><br />
+        <input type="text" name="login" class="form-input" required/><br />
+
+        <label for="nombre">Contraseña (entre 4 y 8 caracteres) *</label><br />
+        <input type="password" name="password" class="form-input" maxlength="8" pattern="^.{4,8}$"
+        required/><br />
+
+        <p class="obligatorio">*Campo obligatorio.</p><br />
+
+<!-- Espacio para los botones de reset y envío de datos. -->
+
+        <div class="botones">
+        <input type="reset" name="reset" class="boton" value="¡Empieza de nuevo!"/>
+
+        <input type="submit" name="submit" class="boton" value="¡Regístrate ya!"/>
+    </div>
+    </form>
+</div>
+
+<!-- Hacemos validación de los datos con PHP. Aquí hacemos una pequeña llamada por
+si diese error. -->
+
+<?php if (!empty($error)) { ?>
+    <p><?php echo $error; ?></p>
+<?php } ?>
+
+<!-- A continuación hacemos validación con JS, pese a que antes no lo conseguíamos
+porque nos daba errores. -->
+
+<script src="script.js"></script>
+
+</body>
+</html>

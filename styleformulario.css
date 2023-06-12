@@ -1,0 +1,79 @@
+/* Seguirá la línea del css principal, pero lo creamos en parte
+para poder editar mejor el mensaje de los datos de registro. */
+
+@import url('https://fonts.google.com/specimen/Roboto');
+
+body {
+    font-family: 'Roboto';
+    flex-direction: column;
+    justify-content: center;
+    color: #000000;
+	background: linear-gradient(90deg, rgb(192, 151, 213) 0%, rgba(148,187,233,1) 100%);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.success-message {
+    color: #000000;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Roboto';
+    margin-top: 60px;
+    font-weight: bold;
+}
+
+.info {
+    color: #000000;
+    text-align: center;
+    font-family: 'Roboto';
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 0.1;
+    font-weight: normal;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    align-items: center;
+    color: #000000;
+    font-size: 20px;
+    font-family: 'Roboto';
+    text-align: center;
+    text-decoration: none;
+    margin: 20px 20px;
+    position: relative;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    background-color: #000000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+}
+
+.button:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+}

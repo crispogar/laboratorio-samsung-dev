@@ -1,0 +1,116 @@
+/* Le metemos algo de estilo para que quede mono y se vea algo más vistoso. */
+
+@import url('https://fonts.google.com/specimen/Roboto');
+
+body {
+    font-family: 'Roboto';
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+	background: linear-gradient(90deg, rgb(192, 151, 213) 0%, rgba(148,187,233,1) 100%);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+h1 {
+    font-family: 'Roboto';
+    color: #000000;
+    font-weight: 450;
+    height: 35px;
+    margin: auto; 
+    line-height: 10px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-family: 'Roboto';
+    font-size: small;
+    color: #000000;
+    font-weight: 20px;
+    height: 40px;
+    margin: auto; 
+    line-height: 10px; 
+    margin-top: 10px;
+    text-align: left;
+} 
+
+p.obligatorio {
+    font-family: 'Roboto';
+    margin-top: 5px;
+    margin-bottom: -5px;
+    width: 390px;
+    text-align: left;
+}
+
+.formulario {
+    font-family: 'Roboto';
+    border-radius: 5px;
+    padding: 35px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+label {
+    font-family: 'Roboto';
+    color: #000000;
+    font-weight: bold;
+    text-align: left;
+    width: 390px;
+    margin-bottom: -12px;
+}
+
+input {
+    font-family: 'Roboto';
+    height: 30px;
+    width: 375px;
+    border-radius: 5px;
+    border: 2px solid #000000;
+    padding-left: 10px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    width: 390px;
+}
+
+.boton {
+    color: #ffffff;
+    font-size: large;
+    font-weight: bolder;
+    background-color: #00000060;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    height: 40px;
+    width: 193px;
+    cursor: pointer;
+    margin-top: -15px;
+    text-align: center;
+}
+
+.boton:hover {
+    background-color: #00000090;
+    border: #00000090;
+}

@@ -1,0 +1,100 @@
+/* Seguirá la línea del css principal, pero lo creamos en parte
+para poder editar mejor el formato de la tabla. */
+
+@import url('https://fonts.google.com/specimen/Roboto');
+
+body {
+    font-family: 'Roboto';
+    flex-direction: column;
+    justify-content: center;
+    color: #000000;
+	background: linear-gradient(90deg, rgb(192, 151, 213) 0%, rgba(148,187,233,1) 100%);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+h1 {
+    font-family: 'Roboto';
+    color: #000000;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    line-height: 10px; 
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #9F86C0;
+    color: #ffffff;
+    margin-top: 120px;
+    margin: 0 auto;
+}
+
+tr {
+    font-size: 14px;
+}
+
+th {
+    background-color: #231942;
+    color: #ffffff;
+    border-bottom: #E0B1CB;
+    text-transform: uppercase;
+    padding: 10px;
+    font-family: 'Roboto';
+}
+
+td {
+    border: 1px solid #231942;
+    padding: 14px;
+    font-family: 'Roboto';
+    font-size: 12px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    position: relative;
+    display: block;
+    color: #000000;
+    font-size: large;
+    font-family: 'Roboto';
+    text-align: center;
+    text-decoration: none;
+    margin-top: 40px;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #231942;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.button:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
