@@ -30,3 +30,6 @@ Se requiere crear los scripts html, css, sql y PHP listados a continuación:
 -Si los datos son correctos y el usuario introducido no está ya dado de alta, aparecerá un mensaje que nos muestre la frase “Registro completado con éxito”, los datos se guardarán en la tabla de nuestra BBDD y aparecerá un botón “consulta” que, al pulsarlo, nos dará una lista de los usuarios registrados en nuestra BBDD.
 <br>
 -En resumen, el ejercicio de programación en PHP consiste en crear una página que permita el registro de datos en un formulario HTML, validar los datos ingresados, almacenarlos en una base de datos MySQL y permitir la consulta de los registros.
+<br><br>
+Adicionalmente se adjunta también la tabla en sql resultante con algunos registros, también en formato .txt.
+<br><br>La ruta del proyecto se iniciaría como: http://localhost/laboratorio/index.html
